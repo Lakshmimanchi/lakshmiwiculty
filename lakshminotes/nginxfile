@@ -1,0 +1,6 @@
+FROM ubuntu
+RUN apt-get update
+RUN apt-get install nginx -y
+COPY index.html /var/www/html
+RUN service nginx start
+note: here we can also use ENTRYPOINT whicj starts the server automatically)     
